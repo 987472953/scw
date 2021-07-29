@@ -1,0 +1,40 @@
+spring:
+  redis:
+    host: 139.224.30.125
+    password: dyq*1010A
+    port: 8989
+    
+  application:
+    name: SCW-USER
+  datasource:
+    username: root
+    password: 769800
+    url: jdbc:mysql://139.224.30.125:3306/DBzc?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    filters: stat
+
+mybatis:
+  config-location: classpath:/mybatis/mybatis-config.xml
+  mapper-locations: classpath:/mybatis/mapper/*.xml
+ 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    appname: SCW-USER
+    prefer-ip-address: true
+
+server:
+  port: 7000
+  
+swagger2:
+  enable: true
+  
+sms:
+  host: http://dingxin.market.alicloudapi.com
+  path: /dx/sendSms
+  method: POST
+  appcode: 5c35ac093e8e4a8a9886d9cd3c8d1b5b 
+  

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- <link href="${PATH}/staitc/css/login.css"> -->
+<link href="/staitc/css/login.css" th:href="@{/staitc/css/login.css}">
+</head>
+<body> 
+	<!--  th:text 将div里面的文本内容设置为 -->
+	<div style="height: 100px;" th:text="${hello132}">这是显示欢迎信息</div>
+	
+	<div th:text="${hello}">这是显示欢迎信息</div>
+	
+	<p th:each="name:${unames}" th:text="${name}">其中name是临时的迭代变量名</p>
+	
+	<div>行内写法</div>
+	
+	<p th:each="name:${unames}"> [[${name}]] </p>
+</body>
+</html>

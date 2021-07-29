@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div th:fragment="cssStyle">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"
+			th:href="@{/static/bootstrap/css/bootstrap.min.css}">
+		<link rel="stylesheet" href="css/font-awesome.min.css"
+			th:href="@{/static/css/font-awesome.min.css}">
+		<link rel="stylesheet" href="css/carousel.css"
+			th:href="@{/static/css/carousel.css}">
+	</div>
+
+
+	<span id="jsStyle"> 
+		<script src="jquery/jquery-2.1.1.min.js" th:src="@{/static/jquery/jquery-2.1.1.min.js}"></script>
+		<script src="bootstrap/js/bootstrap.min.js" th:src="@{/static/bootstrap/js/bootstrap.min.js}"></script>
+		<script src="script/docs.min.js" th:src="@{/static/script/docs.min.js}"></script>
+		<script src="script/back-to-top.js" th:src="@{/static/script/back-to-top.js}"></script>
+	</span>
+
+	<div class="container" id="footer">
+		<div class="row clearfix">
+			<div class="col-md-12 column">
+				<div id="footer">
+					<div class="footerNav">
+						<a rel="nofollow" href="http://www.atguigu.com">关于我们</a> | <a
+							rel="nofollow" href="http://www.atguigu.com">服务条款</a> | <a
+							rel="nofollow" href="http://www.atguigu.com">免责声明</a> | <a
+							rel="nofollow" href="http://www.atguigu.com">网站地图</a> | <a
+							rel="nofollow" href="http://www.atguigu.com">联系我们</a>
+					</div>
+					<div class="copyRight">Copyright ?2017-2017atguigu.com 版权所有</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="choseNav">
+		<div id="navbar" class="navbar-collapse collapse" style="float:right;" th:if="${session.loginMember==null}">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="login.html" th:href="@{/login}">登录</a></li>
+                <li><a href="reg.html">注册</a></li>
+              </ul>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" style="float: right;" th:if="${session.loginMember!=null}">
+				<ul class="nav navbar-nav">
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i>
+							[[${session.loginMember.loginacct}]]<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="member.html"><i
+									class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
+							<li><a href="#"><i class="glyphicon glyphicon-comment"></i>
+									消息</a></li>
+							<li class="divider"></li>
+							<li><a th:href="@{/loginout}"><i
+									class="glyphicon glyphicon-off"></i> 退出系统</a></li>
+						</ul></li>
+				</ul>
+			</div>
+	</div>
+	
+
+
+</body>
+</html>

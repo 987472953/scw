@@ -1,0 +1,48 @@
+spring:
+  datasource:
+    username: root
+    password: 769800
+    url: jdbc:mysql://139.224.30.125:3306/DBzc?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.jdbc.Driver
+  application:
+    name: SCW-PROJECT 
+  redis:
+    host: 139.224.30.125
+    password: dyq*1010A
+    port: 8989
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+        
+
+feign:
+  hystrix:
+    enabled: true
+    
+mybatis:
+  config-location: classpath:/mybatis/mybatis-config.xml
+  mapper-locations: classpath:/mybatis/mapper/*.xml
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    appname: SCW-PROJECT
+    prefer-ip-address: true
+    
+server:
+  port: 8002
+  
+swagger2: 
+  enable: true
+  
+
+oss:
+  endpoint: oss-cn-chengdu.aliyuncs.com
+  accessKeyId: LTAI4GBLFe6LRUuXkXhsYnHM
+  accessKeySecret: dwzsO6Tare1QdoQnvvpGk6DmnWs8lu
+  bucketName: dyq-scw
+    
+  
