@@ -38,8 +38,8 @@ swagger2:
   
 oss:
   endpoint: oss-cn-chengdu.aliyuncs.com
-  accessKeyId: LTAI4GJp89iEMRJNWxj6hCpV
-  accessKeySecret: Mgn6ObLagGnGhLyIe9cdyeIC08E3ac
+  accessKeyId: 
+  accessKeySecret: 
   bucketName: dyq-scw
     
   
